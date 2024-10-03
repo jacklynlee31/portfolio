@@ -7,7 +7,7 @@
     --text-light: #1e1e2e; 
     --text-link: #78c2ad;
     --underline: #375a7f;
-    --header: 'Pacifico', cursive;
+    --header: 'Laila', cursive;
     --body: 'Josefin Sans', sans-serif; 
 }
 
@@ -46,11 +46,21 @@ p {
     font-size: 1.1rem;
     hyphens: auto;
     line-height: 1.5;
-    text-indent: 1rem;
 }
 
-small, li {
-    font-family: var(--body); 
+p a {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+small {
+    font-family: var(--body);
+    font-size: 0.95rem;
+}
+
+li {
+    font-family: var(--body);
+    font-size: 1.1rem; 
 }
 
 /* Navigation Bar */
