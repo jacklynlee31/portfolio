@@ -1,6 +1,6 @@
 ---
-title: 'Project 3'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Pricing Component'
+description: 'My work developing a new pricing component for the Netlify Docs.'
 image:
     url: '/GitHub.webp'
     alt: 'GitHub wallpaper'
@@ -10,9 +10,9 @@ worksImage1:
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
+when: Web
+where: Astro, JavaScript
+role: https://astro-milky-way.netlify.app/
 github: https://github.com/ttomczak3/Milky-Way
 ---
 
