@@ -1,92 +1,71 @@
----
-import Container from "@components/Container.astro";
-import { SITE } from "@consts";
-import BackToTop from "@components/BackToTop.astro";
----
+<hr />
 
-<footer class="animate">
-  <Container>
-    <div class="relative">
-      <div class="absolute right-0 -top-20">
-        <BackToTop />
-      </div>
-    </div>
-    <div class="flex justify-between items-center">
-      <div>
-        &copy; 2024 {`|`} {SITE.NAME}
-      </div>
-      <div class="flex flex-wrap gap-1 items-center">
-        <button
-          id="light-theme-button"
-          aria-label="Light theme"
-          class="group size-8 flex items-center justify-center rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
-          >
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-        <button
-          id="dark-theme-button"
-          aria-label="Dark theme"
-          class="group size-8 flex items-center justify-center rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <button
-          id="system-theme-button"
-          aria-label="System theme"
-          class="group size-8 flex items-center justify-center rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
-          >
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </Container>
+<footer>
+  <div>
+    <a
+      href="https://github.com/jacklynlee31"
+      target="_blank"
+      rel="noopener nofollow noreferrer"
+      aria-label="Link to github profile."
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        width="20"
+        height="20"
+        ><path
+          fill="currentColor"
+          d="M208.31 75.68A59.78 59.78 0 0 0 202.93 28a8 8 0 0 0-6.93-4a59.75 59.75 0 0 0-48 24h-24a59.75 59.75 0 0 0-48-24a8 8 0 0 0-6.93 4a59.78 59.78 0 0 0-5.38 47.68A58.14 58.14 0 0 0 56 104v8a56.06 56.06 0 0 0 48.44 55.47A39.8 39.8 0 0 0 96 192v8H72a24 24 0 0 1-24-24a40 40 0 0 0-40-40a8 8 0 0 0 0 16a24 24 0 0 1 24 24a40 40 0 0 0 40 40h24v16a8 8 0 0 0 16 0v-40a24 24 0 0 1 48 0v40a8 8 0 0 0 16 0v-40a39.8 39.8 0 0 0-8.44-24.53A56.06 56.06 0 0 0 216 112v-8a58.14 58.14 0 0 0-7.69-28.32ZM200 112a40 40 0 0 1-40 40h-48a40 40 0 0 1-40-40v-8a41.74 41.74 0 0 1 6.9-22.48a8 8 0 0 0 1.1-7.69a43.81 43.81 0 0 1 .79-33.58a43.88 43.88 0 0 1 32.32 20.06a8 8 0 0 0 6.71 3.69h32.35a8 8 0 0 0 6.74-3.69a43.87 43.87 0 0 1 32.32-20.06a43.81 43.81 0 0 1 .77 33.58a8.09 8.09 0 0 0 1 7.65a41.72 41.72 0 0 1 7 22.52Z"
+        ></path></svg
+      ></a
+    >
+    <a
+      href="https://www.linkedin.com/in/jacklynlee31"
+      target="_blank"
+      rel="noopener nofollow noreferrer"
+      aria-label="Link to linkedin profile"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        width="20"
+        height="20"
+        ><path
+          fill="currentColor"
+          d="M216 24H40a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16Zm0 192H40V40h176v176ZM96 112v64a8 8 0 0 1-16 0v-64a8 8 0 0 1 16 0Zm88 28v36a8 8 0 0 1-16 0v-36a20 20 0 0 0-40 0v36a8 8 0 0 1-16 0v-64a8 8 0 0 1 15.79-1.78A36 36 0 0 1 184 140Zm-84-56a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"
+        ></path></svg
+      ></a
+    >
+    <a
+      href="http://bsky.app/profile/jacklynlee31.bsky.social"
+      target="_blank"
+      rel="noopener nofollow noreferrer"
+      aria-label="Link to bluesky profile"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        height="20"
+        width="20"
+        ><path d="M125 112.5c-11.322916666666666 -22.020833333333332 -42.145833333333336 -63.05208333333333 -70.8125 -83.28125C26.729166666666664 9.833333333333332 16.260416666666664 13.1875 9.395833333333334 16.302083333333332 1.4479166666666667 19.874999999999996 0 32.083333333333336 0 39.24999999999999c0 7.187499999999999 3.9375 58.854166666666664 6.5 67.48958333333333 8.489583333333332 28.5 38.67708333333333 38.125 66.48958333333333 35.041666666666664 1.4166666666666667 -0.20833333333333331 2.8645833333333335 -0.40625 4.322916666666666 -0.5833333333333333 -1.4375 0.22916666666666663 -2.875 0.41666666666666663 -4.322916666666666 0.5833333333333333 -40.75 6.041666666666666 -76.94791666666666 20.885416666666664 -29.479166666666664 73.72916666666667 52.21874999999999 54.0625 71.5625 -11.59375 81.48958333333333 -44.87499999999999 9.927083333333332 33.28124999999999 21.354166666666664 96.57291666666667 80.55208333333333 44.87499999999999 44.447916666666664 -44.87499999999999 12.208333333333332 -67.6875 -28.541666666666668 -73.72916666666667a91.05208333333333 91.05208333333333 0 0 1 -4.322916666666666 -0.5833333333333333c1.4583333333333335 0.17708333333333334 2.90625 0.37499999999999994 4.322916666666666 0.5833333333333333 27.812499999999996 3.0937499999999996 57.99999999999999 -6.541666666666666 66.48958333333333 -35.041666666666664 2.5625 -8.624999999999998 6.5 -60.3125 6.5 -67.47916666666666 0 -7.187499999999999 -1.4479166666666667 -19.385416666666664 -9.395833333333334 -22.979166666666664 -6.864583333333333 -3.1041666666666665 -17.333333333333332 -6.458333333333333 -44.791666666666664 12.916666666666666C167.14583333333331 49.458333333333336 136.32291666666666 90.48958333333333 125 112.5Z" fill="#000000" stroke-width="1"></path>&lt;</svg
+      ></a
+    >
+  </div>
+
+  <small>
+    <time>2025</time>
+    <abbr>
+      <strong> © Jacklyn.</strong>
+    </abbr>
+  </small>
+
+  <br />
+  <small>
+    <strong>Colophon:</strong> Built with <a href="https://astro.build/"
+      >Astro</a
+    >
+  </small>
 </footer>
+
+<style>
+  footer div a {
+    margin-right: 5px;
+  }
+</style>

@@ -1,73 +1,322 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: Inter var;
+  font-display: swap;
+  src: url("/assets/font/intervar.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Jetbrains Mono;
+  font-display: swap;
+  src: url("/assets/font/jetbrainsmono-regular.woff2") format("woff2");
+}
+
+:root {
+  --accent: #8926ed;
+  --accent-faint: #8926ed55;
+
+  --white: #ffffff;
+  --white-light: #fafafa;
+  --white-mid: #ededed;
+  --white-dark: #cccccc;
+
+  --black: #000000;
+  --black-light: #333333;
+  --black-mid: #222222;
+  --black-dark: #111111;
+
+  --grey-light: #999999;
+  --grey-mid: #777777;
+  --grey-dark: #555555;
+}
+
+*::selection {
+  background-color: #8926ed50;
+  color: purple;
+}
 
 html {
-  overflow-y: scroll;
-  color-scheme: light;
-}
-
-html.dark {
-  color-scheme: dark;
-}
-
-html,
-body {
-  @apply size-full;
+  min-height: 100%;
 }
 
 body {
-  @apply font-sans antialiased;
-  @apply flex flex-col;
-  @apply bg-stone-100 dark:bg-stone-900;
-  @apply text-black/50 dark:text-white/75;
+  background: #ffdbea;
+  background: linear-gradient(231deg, rgba(255, 219, 234, 1) 0%, rgba(170, 203, 242, 1) 100%);
+  height: 100%;
+  color: var(--black-dark);
+
+  padding: 2rem;
+  max-width: 45rem;
+  margin: 0 auto;
+  vertical-align: baseline;
+
+  tab-size: 4;
+  text-indent: 0;
+  line-height: 1.8;
+  text-align: start;
+  letter-spacing: normal;
+  font-variation-settings: normal;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "calt", "liga";
+  font-family: "Inter var", "Inter", "Helvetica", "Arial", "Liberation Sans",
+    "Noto sans", sans-serif;
+
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-header {
-  @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-stone-100/75 dark:bg-stone-900/25;
-  @apply backdrop-blur-sm saturate-200;
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
-main {
-  @apply flex-1 py-32;
+h2 {
+  font-size: 1.4rem;
 }
 
-footer {
-  @apply py-5 text-sm;
+h3 {
+  font-size: 1.3rem;
 }
 
-article {
-  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-  @apply prose-headings:font-semibold prose-p:font-serif;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+h4 {
+  font-size: 1.2rem;
 }
 
-@layer utilities {
-  article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
-    @apply transition-colors duration-300 ease-in-out;
-  }
-  article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
-  }
+h5 {
+  font-size: 1rem;
 }
 
-.animate {
-  @apply opacity-0 translate-y-3;
-  @apply transition-all duration-700 ease-out;
+small {
+  font-size: 0.8rem;
 }
 
-.animate.show {
-  @apply opacity-100 translate-y-0;
+a {
+  color: var(--black-mid);
+  text-decoration-color: var(--black-light);
+  font-weight: 500;
+  text-decoration: underline;
 }
 
-html #back-to-top {
-  @apply opacity-0 pointer-events-none;
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent-faint);
 }
 
-html.scrolled #back-to-top {
-  @apply opacity-100 pointer-events-auto;
+hr {
+  border: 0.5px solid var(--black-light);
+  margin: 32px 0 32px 0;
+}
+
+ul,
+ol,
+li {
+  text-decoration-color: var(--white-mid);
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--black-mid);
+  border-collapse: collapse;
+  padding: 0 5px 0 5px;
+  text-align: left;
+}
+
+blockquote {
+  border-left: var(--white-mid) solid 4px;
+  padding: 0px 20px;
+  margin: 20px 0 20px 0;
+  font-weight: 500;
+}
+
+code {
+  font-size: 0.9rem;
+  font-family: "Jetbrains Mono", monospace;
+}
+
+pre {
+  background: var(--white);
+  border: solid 1px var(--white-dark);
+  padding: 20px;
+  border-radius: 5px;
+  overflow: auto;
+  font-family: "Jetbrains Mono", monospace;
+}
+
+kbd {
+  font-family: "Jetbrains Mono", monospace;
+  font-size: 0.8rem;
+}
+
+mark {
+  background: var(--accent-faint);
+}
+
+audio {
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px 0 20px 0;
+  display: block;
+}
+
+img {
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 500px;
+  margin: 20px 0 20px 0;
+  display: block;
+  box-shadow: -8px 8px 20px var(--white-dark);
+}
+
+video {
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 500px;
+  margin: 20px 0 20px 0;
+  display: block;
+}
+
+fieldset {
+  border: 1px solid var(--white-dark);
+  border-radius: 6px;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+button,
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+input[type="reset"],
+input[type="submit"],
+select {
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+  display: block;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid var(--white-mid);
+  background-color: var(--white);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: 1.2em;
+  width: 1em;
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+input {
+  vertical-align: top;
+}
+
+label {
+  vertical-align: middle;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+textarea {
+  display: block;
+  margin-right: 1rem;
+  resize: vertical;
+}
+
+textarea:not([rows]) {
+  min-height: 40px;
+  height: 140px;
+}
+
+select {
+  padding-right: 35px;
+}
+
+select[multiple] {
+  padding-right: 10px;
+  overflow-y: auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid var(--accent);
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+legend {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+input[type="range"] {
+  margin: 10px 0;
+  padding: 10px 0;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: none;
+  outline: none;
+  border-radius: 55px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 6px 20px;
+  font-size: 0.9rem;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  filter: brightness(1.1);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  border: 1px solid var(--accent);
+  box-shadow: none;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled {
+  border-color: var(--grey-mid);
 }
