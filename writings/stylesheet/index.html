@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width" , initial-scale="1"><title>Stylesheet</title><meta name="description" content="Your Description Goes Here."><meta name="generator" content="Astro v4.16.18"><link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico"><meta property="og:title" content="Stylesheet"><meta property="og:site_name" content="Your Name"><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/portfolio/writings/stylesheet/"><!-- <meta property="og:image" content="/assets/img/" /> --><meta property="og:image:alt" content="Your Description Goes Here."><meta property="og:locale" content="en"><meta property="og:description" content="Your Description Goes Here."><link rel="stylesheet" href="/portfolio/_astro/index.CVDdDS7t.css"></head> <body> <nav data-astro-cid-3ef6ksr2> <p data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>home</a> <a href="/projects" data-astro-cid-3ef6ksr2>projects</a> </p> </nav>   <h1 id="stylesheet">STYLESHEET</h1>
+<h2 id="this-is-2nd-level-heading">This is 2nd level heading</h2>
+<p>This is a test paragraph.</p>
+<h3 id="this-is-3rd-level-heading">This is 3rd level heading</h3>
+<p>This is a test paragraph.</p>
+<h4 id="this-is-4th-level-heading">This is 4th level heading</h4>
+<p>This is a test paragraph.</p>
+<h5 id="this-is-5th-level-heading">This is 5th level heading</h5>
+<p>This is a test paragraph.</p>
+<h6 id="this-is-6th-level-heading">This is 6th level heading</h6>
+<p>This is a test paragraph.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> copyButton</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"copy-button"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> copyButtonFeedback</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">getElementById</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"copy-button-feedback"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">copyButton.</span><span style="color:#B392F0">addEventListener</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"click"</span><span style="color:#E1E4E8">, () </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> clipboard</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> navigator.clipboard </span><span style="color:#F97583">||</span><span style="color:#E1E4E8"> window.clipboard;</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> snippetText</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> document.</span><span style="color:#B392F0">querySelector</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`#link-snippet code`</span><span style="color:#E1E4E8">).textContent;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  clipboard</span></span>
+<span class="line"><span style="color:#E1E4E8">    .</span><span style="color:#B392F0">writeText</span><span style="color:#E1E4E8">(snippetText)</span></span>
+<span class="line"><span style="color:#E1E4E8">    .</span><span style="color:#B392F0">then</span><span style="color:#E1E4E8">(() </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      copyButtonFeedback.textContent </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "✔"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    })</span></span>
+<span class="line"><span style="color:#E1E4E8">    .</span><span style="color:#B392F0">catch</span><span style="color:#E1E4E8">(() </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      copyButtonFeedback.textContent </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "❌"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    })</span></span>
+<span class="line"><span style="color:#E1E4E8">    .</span><span style="color:#B392F0">then</span><span style="color:#E1E4E8">(() </span><span style="color:#F97583">=></span></span>
+<span class="line"><span style="color:#B392F0">      setTimeout</span><span style="color:#E1E4E8">(() </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">        copyButtonFeedback.textContent </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> ""</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">      }, </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"></span></code></pre>
+<h2>Basic block level elements</h2>
+<p>This is a normal paragraph (<code>p</code> element).
+To add some length to it, let us mention that this page was
+primarily written for testing the effect of <strong>user style sheets</strong>.
+You can use it for various other purposes as well, like just checking how
+your browser displays various HTML elements by default.
+It can also be useful when testing conversions from HTML
+format to other formats, since some elements can go wrong then.</p> 
+<p>This is another paragraph. I think it needs to be added that
+the set of elements tested is not exhaustive in any sense. I have selected
+those elements for which it can make sense to write user style sheet rules,
+in my opionion.</p>
+<div>This is a <code>div</code> element. Authors may use such elements instead
+of paragraph markup for various reasons. (End of <code>div</code>.)</div>
+<blockquote><p>This is a block quotation containing a single
+paragraph. Well, not quite, since this is not <em>really</em>
+quoted text, but I hope you understand the point. After all, this
+page does not use HTML markup very normally anyway.</p></blockquote>
+<p>The following contains address information about the author, in an <code>address</code>
+element.</p>
+<address>
+<a href="../personal.html" lang="fi" hreflang="en">Jukka Korpela</a>,
+<a href="mailto:jkorpela@cs.tut.fi">jkorpela@cs.tut.fi</a><br>
+Päivänsäteenkuja 4 A, Espoo, Finland
+</address>
+<h2>Lists</h2>
+<p>This is a paragraph before an <strong>unnumbered</strong> list (<code>ul</code>). Note that
+the spacing between a paragraph and a list before or after that is hard
+to tune in a user style sheet. You can't guess which paragraphs are
+logically related to a list, e.g. as a "list header".</p>
+<ul>
+  <li> One.
+  </li><li> Two.
+  </li><li> Three. Well, probably this list item should be longer. Note that
+for short items lists look better if they are compactly presented,
+       whereas for long items, it would be better to have more vertical spacing between items.
+  </li><li> Four. This is the last item in this list.
+       Let us terminate the list now without making any more fuss about it.
+</li></ul>
+<p>The following is a <code>menu</code> list:</p>
+<menu>
+  <li> One.
+  </li><li> Two.
+  </li><li> Three. Well, probably this list item should be longer so that it will
+probably wrap to the next line in rendering.
+</li></menu>
+<p>The following is a <code>dir</code> list:</p>
+<dir>
+  <li> One.
+  </li><li> Two.
+  </li><li> Three. Well, probably this list item should be longer so that it will
+probably wrap to the next line in rendering.
+</li></dir>
+<p>This is a paragraph before a <strong>numbered</strong> list (<code>ol</code>). Note that
+the spacing between a paragraph and a list before or after that is hard
+to tune in a user style sheet. You can't guess which paragraphs are
+logically related to a list, e.g. as a "list header".</p>
+<ol>
+  <li> One.
+  </li><li> Two.
+  </li><li> Three. Well, probably this list item should be longer. Note that if
+items are short, lists look better if they are compactly presented,
+       whereas for long items, it would be better to have more vertical spacing between items.
+  </li><li> Four. This is the last item in this list.
+       Let us terminate the list now without making any more fuss about it.
+</li></ol>
+<p>This is a paragraph before a <strong>definition</strong> list (<code>dl</code>).
+In principle, such a list should consist of <em>terms</em> and associated 
+definitions.
+But many authors use <code>dl</code> elements for fancy "layout" things. Usually the
+effect is not <em>too</em> bad, if you design user style sheet rules for <code>dl</code>
+which are suitable
+for real definition lists.
+</p><dl>
+  <dt> recursion
+  </dt><dd> see recursion
+  </dd><dt> recursion, indirect
+  </dt><dd> see indirect recursion
+  </dd><dt> indirect recursion
+  </dt><dd> see recursion, indirect
+  </dd><dt> term
+  </dt><dd> a word or other expression taken into specific use in
+       a well-defined meaning, which is often defined rather rigorously, even
+       formally, and may differ quite a lot from an everyday meaning
+</dd></dl>
+<h2>Text-level markup</h2>
+<ul>
+  <li> <abbr title="Cascading Style Sheets">CSS</abbr> (an abbreviation;
+ <code>abbr</code> markup used)
+  </li><li> <acronym title="radio detecting and ranging">radar</acronym> (an acronym; <code>acronym</code> markup used)
+  </li><li> <b>bolded</b> (<code>b</code> markup used - just bolding with unspecified
+       semantics)
+  </li><li> <big>big thing</big> (<code>big</code> markup used)
+  </li><li> <font size="6">large size</font> (<code>font size=6</code> markup used)
+  </li><li> <font face="Courier">Courier font</font> (<code>font face=Courier</code> markup used)
+  </li><li> <font color="red">red text</font> (<code>font color=red</code> markup used)
+  </li><li> <cite>Origin of Species</cite> (a book title;
+       <code>cite</code> markup used)
+  </li><li> <code>a[i] = b[i] + c[i);</code> (computer code; <code>code</code> markup used)
+  </li><li> here we have some <del>deleted</del> text (<code>del</code> markup used)
+  </li><li> an <dfn>octet</dfn> is an entity consisting of eight bits
+       (<code>dfn</code> markup used for the term being defined)
+  </li><li> this is <em>very</em> simple (<code>em</code> markup used for emphasizing
+       a word)
+  </li><li> <i lang="la">Homo sapiens</i> (should appear in italics;  <code>i</code> markup used)
+  </li><li> here we have some <ins>inserted</ins> text (<code>ins</code> markup used)
+  </li><li> type <kbd>yes</kbd> when prompted for an answer (<code>kbd</code> markup
+       used for text indicating keyboard input)
+  </li><li> <q>Hello!</q> (<code>q</code> markup used for quotation)
+  </li><li> He said: <q>She said <q>Hello!</q></q> (a quotation inside a quotation)
+  </li><li> you may get the message <samp>Core dumped</samp> at times
+       (<code>samp</code> markup used for sample output)
+  </li><li> <small>this is not that important</small> (<code>small</code> markup used)
+  </li><li> <strike>overstruck</strike> (<code>strike</code> markup used; note:
+       <code>s</code> is a nonstandard synonym for <code>strike</code>)
+  </li><li> <strong>this is highlighted text</strong> (<code>strong</code>
+       markup used)
+  </li><li> In order to test how subscripts and superscripts (<code>sub</code> and
+       <code>sup</code> markup) work inside running text, we need some
+       dummy text around constructs like x<sub>1</sub> and H<sub>2</sub>O
+       (where subscripts occur). So here is some fill so that
+       you will (hopefully) see whether and how badly the subscripts
+       and superscripts mess up vertical spacing between lines.
+       Now superscripts: M<sup>lle</sup>, 1<sup>st</sup>, and then some
+       mathematical notations: e<sup>x</sup>, sin<sup>2</sup> <i>x</i>,
+       and some nested superscripts (exponents) too:
+       e<sup>x<sup>2</sup></sup> and f(x)<sup>g(x)<sup>a+b+c</sup></sup>
+       (where 2 and a+b+c should appear as exponents of exponents).
+  </li><li> <tt>text in monospace font</tt> (<code>tt</code> markup used)
+  </li><li> <u>underlined</u> text (<code>u</code> markup used)
+  </li><li> the command <code>cat</code> <var>filename</var> displays the
+       file specified by the <var>filename</var> (<code>var</code> markup
+       used to indicate a word as a variable).
+</li></ul>
+<p>Some of the elements tested above are typically displayed in a monospace
+font, often using the <em>same</em> presentation for all of them. This
+tests whether that is the case on your browser:</p>
+<ul>
+  <li> <code>This is sample text inside code markup</code>
+  </li><li> <kbd>This is sample text inside kbd markup</kbd>
+  </li><li> <samp>This is sample text inside samp markup</samp>
+  </li><li> <tt>This is sample text inside tt markup</tt>
+</li></ul>
+<h2>Links</h2>
+<ul>
+<li> <a href="../index.html">main page</a>
+</li><li> <a href="http://www.unicode.org/versions/Unicode4.0.0/ch06.pdf" title="Writing Systems and Punctuation" type="application/pdf">Unicode Standard, chapter 6</a>
+</li></ul>
+<p>This is a text paragraph that contains some
+inline links. Generally, inline links (as opposite to e.g. links
+lists) are problematic
+from the
+<a href="http://www.useit.com">usability</a> perspective,
+but they may have use as
+“incidental”, less relevant links. See the document
+<cite><a href="links.html">Links Want To Be Links</a></cite>.</p>
+<h2>Forms</h2>
+<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+<div>
+<input type="hidden" name="hidden field" value="42">
+This is a form containing various fields (with some initial
+values (defaults) set, so that you can see how input text looks
+like without actually typing it):</div>
+<div><label for="but">Button:
+<button id="but" type="submit" name="foo" value="bar">A cool<br>button</button></label></div>
+<div><label for="f0">Reset button:
+<input id="f0" type="reset" name="reset" value="Reset"></label></div>
+<div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" value="Default text."></label></div>
+<div><label for="f2">Multi-line text input field (textarea):</label><br>
+<textarea id="f2" name="textarea" rows="2" cols="20">Default text.
+</textarea></div>
+<div>The following two radio buttons are inside
+a <code>fieldset</code> element with a <code>legend</code>:</div>
+<fieldset>
+<legend>Legend</legend>
+<div><label for="f3"><input id="f3" type="radio" name="radio" value="1"> Radio button 1</label></div>
+<div><label for="f4"><input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label></div>
+</fieldset>
+<fieldset>
+<legend>Check those that apply</legend>
+<div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
+<div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
+</fieldset>
+<div><label for="f10">A <code>select</code> element with <code>size="1"</code>
+(dropdown box):
+<select id="f10" name="select1" size="1">
+<option>one
+</option><option selected>two (default)
+</option><option>three
+</option></select></label></div>
+<div><label for="f11">A <code>select</code> element with <code>size="3"</code>
+(listbox):</label><br>
+<select id="f11" name="select2" size="3">
+<option>one
+</option><option selected>two (default)
+</option><option>three
+</option></select></div>
+<div><label for="f99">Submit button:
+<input id="f99" type="submit" name="submit" value="Just a test"></label></div>
+</form>
+<h2>Tables</h2>
+<p>The following table has a caption. The first row and the first column
+contain table header cells (<code>th</code> elements) only; other cells
+are data cells (<code>td</code> elements), with <code>align="right"</code>
+attributes:</p>
+<table summary="Each row names a Nordic country and specifies its total area and land area, in square kilometers">
+<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
+<tbody><tr><th scope="col">Country</th> <th scope="col">Total area</th> <th scope="col">Land area</th>
+</tr><tr><th scope="row">Denmark</th> <td align="RIGHT"> 43,070 </td><td align="RIGHT"> 42,370</td></tr>
+<tr><th scope="row">Finland</th> <td align="RIGHT">337,030 </td><td align="RIGHT">305,470</td></tr>
+<tr><th scope="row">Iceland</th> <td align="RIGHT">103,000 </td><td align="RIGHT">100,250</td></tr>
+<tr><th scope="row">Norway</th>  <td align="RIGHT">324,220 </td><td align="RIGHT">307,860</td></tr>
+<tr><th scope="row">Sweden</th>  <td align="RIGHT">449,964 </td><td align="RIGHT">410,928</td></tr>
+</tbody></table>
+<h2>Character test</h2>
+<p>The following table has some sample characters with
+annotations. If the browser’s default font does not
+contain all of them, they may get displayed using backup fonts.
+This may cause stylistic differences, but it should not
+prevent the characters from being displayed at all.</p>
+<table>
+<tbody><tr><th>Char. </th><th>Explanation </th><th>Notes
+</th></tr><tr><td>ê </td><td>e with circumflex </td><td>Latin 1 character, should be ok
+</td></tr><tr><td>— </td><td>em dash </td><td>Windows Latin 1 character, should be ok, too
+</td></tr><tr><td>Ā </td><td>A with macron (line above) </td><td>Latin Extended-A character, not present in all fonts
+</td></tr><tr><td>Ω </td><td>capital omega </td><td>A Greek letter
+</td></tr><tr><td>− </td><td>minus sign </td><td>Unicode minus
+</td></tr><tr><td>⌀ </td><td>diameter sign </td><td>relatively rare in fonts
+</td></tr></tbody></table>
+  <hr data-astro-cid-sz7xmlte> <footer data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte> <a href="https://github.com/jacklynlee31" target="_blank" rel="noopener nofollow noreferrer" aria-label="Link to github profile." data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" data-astro-cid-sz7xmlte><path fill="currentColor" d="M208.31 75.68A59.78 59.78 0 0 0 202.93 28a8 8 0 0 0-6.93-4a59.75 59.75 0 0 0-48 24h-24a59.75 59.75 0 0 0-48-24a8 8 0 0 0-6.93 4a59.78 59.78 0 0 0-5.38 47.68A58.14 58.14 0 0 0 56 104v8a56.06 56.06 0 0 0 48.44 55.47A39.8 39.8 0 0 0 96 192v8H72a24 24 0 0 1-24-24a40 40 0 0 0-40-40a8 8 0 0 0 0 16a24 24 0 0 1 24 24a40 40 0 0 0 40 40h24v16a8 8 0 0 0 16 0v-40a24 24 0 0 1 48 0v40a8 8 0 0 0 16 0v-40a39.8 39.8 0 0 0-8.44-24.53A56.06 56.06 0 0 0 216 112v-8a58.14 58.14 0 0 0-7.69-28.32ZM200 112a40 40 0 0 1-40 40h-48a40 40 0 0 1-40-40v-8a41.74 41.74 0 0 1 6.9-22.48a8 8 0 0 0 1.1-7.69a43.81 43.81 0 0 1 .79-33.58a43.88 43.88 0 0 1 32.32 20.06a8 8 0 0 0 6.71 3.69h32.35a8 8 0 0 0 6.74-3.69a43.87 43.87 0 0 1 32.32-20.06a43.81 43.81 0 0 1 .77 33.58a8.09 8.09 0 0 0 1 7.65a41.72 41.72 0 0 1 7 22.52Z" data-astro-cid-sz7xmlte></path></svg></a> <a href="https://www.linkedin.com/in/jacklynlee31" target="_blank" rel="noopener nofollow noreferrer" aria-label="Link to linkedin profile" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" data-astro-cid-sz7xmlte><path fill="currentColor" d="M216 24H40a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16Zm0 192H40V40h176v176ZM96 112v64a8 8 0 0 1-16 0v-64a8 8 0 0 1 16 0Zm88 28v36a8 8 0 0 1-16 0v-36a20 20 0 0 0-40 0v36a8 8 0 0 1-16 0v-64a8 8 0 0 1 15.79-1.78A36 36 0 0 1 184 140Zm-84-56a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" data-astro-cid-sz7xmlte></path></svg></a> <a href="http://bsky.app/profile/jacklynlee31.bsky.social" target="_blank" rel="noopener nofollow noreferrer" aria-label="Link to bluesky profile" data-astro-cid-sz7xmlte><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" height="20" width="20" data-astro-cid-sz7xmlte><path d="M125 112.5c-11.322916666666666 -22.020833333333332 -42.145833333333336 -63.05208333333333 -70.8125 -83.28125C26.729166666666664 9.833333333333332 16.260416666666664 13.1875 9.395833333333334 16.302083333333332 1.4479166666666667 19.874999999999996 0 32.083333333333336 0 39.24999999999999c0 7.187499999999999 3.9375 58.854166666666664 6.5 67.48958333333333 8.489583333333332 28.5 38.67708333333333 38.125 66.48958333333333 35.041666666666664 1.4166666666666667 -0.20833333333333331 2.8645833333333335 -0.40625 4.322916666666666 -0.5833333333333333 -1.4375 0.22916666666666663 -2.875 0.41666666666666663 -4.322916666666666 0.5833333333333333 -40.75 6.041666666666666 -76.94791666666666 20.885416666666664 -29.479166666666664 73.72916666666667 52.21874999999999 54.0625 71.5625 -11.59375 81.48958333333333 -44.87499999999999 9.927083333333332 33.28124999999999 21.354166666666664 96.57291666666667 80.55208333333333 44.87499999999999 44.447916666666664 -44.87499999999999 12.208333333333332 -67.6875 -28.541666666666668 -73.72916666666667a91.05208333333333 91.05208333333333 0 0 1 -4.322916666666666 -0.5833333333333333c1.4583333333333335 0.17708333333333334 2.90625 0.37499999999999994 4.322916666666666 0.5833333333333333 27.812499999999996 3.0937499999999996 57.99999999999999 -6.541666666666666 66.48958333333333 -35.041666666666664 2.5625 -8.624999999999998 6.5 -60.3125 6.5 -67.47916666666666 0 -7.187499999999999 -1.4479166666666667 -19.385416666666664 -9.395833333333334 -22.979166666666664 -6.864583333333333 -3.1041666666666665 -17.333333333333332 -6.458333333333333 -44.791666666666664 12.916666666666666C167.14583333333331 49.458333333333336 136.32291666666666 90.48958333333333 125 112.5Z" fill="#000000" stroke-width="1" data-astro-cid-sz7xmlte></path>&lt;</svg></a> </div> <small data-astro-cid-sz7xmlte> <time data-astro-cid-sz7xmlte>2025</time> <abbr data-astro-cid-sz7xmlte> <strong data-astro-cid-sz7xmlte> © Jacklyn.</strong> </abbr> </small> <br data-astro-cid-sz7xmlte> <small data-astro-cid-sz7xmlte> <strong data-astro-cid-sz7xmlte>Colophon:</strong> Built with <a href="https://astro.build/" data-astro-cid-sz7xmlte>Astro</a> </small> </footer>  </body></html>
