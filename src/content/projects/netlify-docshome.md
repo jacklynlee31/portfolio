@@ -1,12 +1,23 @@
 ---
-title: Netlify - Docs Homepage Redesign
+title: Netlify - Docs Homepage Redesign & Sanity Process Doc
 pubDate: Jan 21 2023
 ---
 
 
-## Netlify - Docs Homepage Redesign
+## Netlify - Docs Homepage Redesign & Sanity Process Doc
 
-In the summer of 2022, I started the Docs homepage redesign project at Netlify. The homepage at the time was functional, but I wanted to improve both the aesthetics and the content of the page. 
+In the summer of 2022, I started the Docs homepage redesign project at Netlify. The homepage at the time was functional, but I wanted to improve both the aesthetics and the content of the page. I also put together a quick internal guide on using Sanity with the new homepage, so the docs team could easily update and add content.
+
+
+### Table of Contents
+- [Goals for the new homepage](#goals-for-the-new-homepage)
+- [First steps](#first-steps)
+- [Exploring and Iterating](#exploring-and-iterating)
+- [Content & Sanity CMS](#content--sanity-cms)
+- [Results and Improvements](#results-and-improvements)
+- [Direct Links](#direct-links)
+- [Sanity Internal Process Doc](#sanity-internal-process-doc)
+
 
 ### Goals for the new homepage
 
@@ -69,3 +80,11 @@ The improvements included:
 - <a href="https://web.archive.org/web/20220630202018/https://docs.netlify.com/" target="new">Link to the Docs homepage BEFORE the redesign</a>
 
 - ✨ <a href="https://web.archive.org/web/20230131202505/https://docs.netlify.com/" target="new">Link to the Docs homepage AFTER the redesign</a>
+
+## Sanity Internal Process Doc
+
+As part of the homepage redesign, I wrote an internal guide for the documentation team on how to use Sanity to update the new homepage. The guide walks through where content lives in the CMS, how to make edits, and how to publish changes — all written with non-technical users in mind.
+
+The goal was to help the team feel confident updating content without needing to loop in engineers every time.
+
+👉 <a href="/portfolio/assets/netlify-sanitydoc.pdf" download>Download Sanity Guide (PDF)</a>
