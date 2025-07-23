@@ -6,9 +6,7 @@ export default defineConfig({
     base: '/portfolio/',
     markdown: {
         shikiConfig: {
-            themes: {
-                light: 'snazzy-light',
-            },
+            theme: 'dracula-soft',
         },
     },
 });
