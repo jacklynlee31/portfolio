@@ -1,13 +1,13 @@
 @font-face {
   font-family: Inter var;
   font-display: swap;
-  src: url("/assets/font/intervar.woff2") format("woff2");
+  src: url("/portfolio/assets/font/intervar.woff2") format("woff2");
 }
 
 @font-face {
   font-family: Jetbrains Mono;
   font-display: swap;
-  src: url("/assets/font/jetbrainsmono-regular.woff2") format("woff2");
+  src: url("/portfolio/assets/font/jetbrainsmono-regular.woff2") format("woff2");
 }
 
 :root {
