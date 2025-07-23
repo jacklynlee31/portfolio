@@ -1,20 +1,16 @@
-<div align="center">
-    <h1>Minimal Memoir</h1>
-</div>
+## Welcome!
 
-## Get Started
+Hi there! This is my personal portfolio site. It's my place to showcase selected projects and writing samples as a technical writer.
 
-1. Clone the repository.
+## Built With
 
-   ```console
-   git clone https://github.com/sudanchapagain/minimal-memoir.git
-   cd minimal-memoir
-   ```
+- Astro
+- Markdown
 
-2. Install Dependencies by running `npm install` in your terminal.
-3. Customize your site by replacing default values like name, description, images and accent colors.
-4. Deploy.
+## Still In Progress
 
-<h2>Preview</h2>
+I'm always regularly updating this site, so if you see an issue...no you didn't. (Or let me know.)
 
-<img src="https://i.postimg.cc/13PsxkX9/site.png">
+## Contact
+
+Want to connect or chat about work? Head to the Contact section on my site.
