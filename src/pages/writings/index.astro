@@ -20,6 +20,13 @@ const posts = (await getCollection("writings")).sort(
           <span class="date">
             <FormattedDate date={post.data.pubDate} />
           </span>
+          {Array.isArray(post.data.tags) && (
+            <span class="tags">
+            {post.data.tags.map(tag => (
+              <span class="tag-badge">{tag}</span>
+            ))}
+            </span>
+          )}
         </div>
       ))
     }
@@ -70,6 +77,17 @@ const posts = (await getCollection("writings")).sort(
         display: flex;
         align-items: center;
         justify-content: flex-end;
+      }
+
+      .tag-badge {
+        background-color: #e0e0e0;
+        color: #333;
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        margin-right: 0.4rem;
+        display: inline-block;
+        margin-bottom: 1.5rem;
       }
     </style>
   </main>
