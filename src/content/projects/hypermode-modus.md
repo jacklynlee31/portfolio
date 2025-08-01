@@ -1,6 +1,7 @@
 ---
 title: Hypermode - Modus Quickstart
 pubDate: Dec 20 2024
+description: "Improving the developer documentation for Modus, an AI modeling tool"
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: Netlify - Directory Sync
 pubDate: Nov 7 2023
+description: "End-to-end docs and testing for security provisioning feature"
 ---
 
 

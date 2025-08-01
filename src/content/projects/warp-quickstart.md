@@ -1,6 +1,7 @@
 ---
 title: Warp - Migrate to Warp & Quickstart
 pubDate: Dec 10 2024
+description: "Improved docs pages to help new users get up and running with Warp"
 ---
 
 

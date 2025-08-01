@@ -21,6 +21,9 @@ const posts = (await getCollection("projects")).sort(
           <span class="date">
             <FormattedDate date={post.data.pubDate} />
           </span>
+          <span>
+            <p class="desc">{post.data.description}</p>
+          </span>
           {Array.isArray(post.data.tags) && (
             <span class="tags">
             {post.data.tags.map(tag => (
@@ -49,7 +52,7 @@ const posts = (await getCollection("projects")).sort(
       .post-item > a > h2 {
         margin: 0;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
         color: var(--black-light);
         display: flex;
         justify-content: flex-start;
@@ -60,14 +63,16 @@ const posts = (await getCollection("projects")).sort(
         color: var(--accent);
       }
 
-      .post-item:last-child {
-        border-bottom: none;
-      }
-
       .title {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+      }
+
+      .desc {
+        display: flex;
+        margin-top: 1px;
+        font-size: 0.9rem;
       }
 
       .date {

@@ -1,6 +1,7 @@
 ---
 title: SPP - The Circuit
 pubDate: Apr 26 2017
+description: "Detailed engineering timeline, project overview, and planning document"
 ---
 
 

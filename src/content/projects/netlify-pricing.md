@@ -1,6 +1,7 @@
 ---
 title: Netlify - Pricing Component
 pubDate: Nov 8 2023
+description: "Built a new Vue.js component for consistent pricing messages"
 ---
 
 ## Pricing component
