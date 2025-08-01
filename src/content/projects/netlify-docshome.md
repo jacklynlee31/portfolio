@@ -1,6 +1,7 @@
 ---
 title: Netlify - Docs Homepage Redesign & Sanity Process Doc
 pubDate: Jan 21 2023
+tags: ["homepage", "design", "Sanity"]
 ---
 
 
